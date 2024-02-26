@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+</head>
+
+<body>
+    <h1> DB Online learning platform </h1>
+    <h3> Sign up page </h3>
+    <form action="{{url_for('signup')}}" method="post">
+        <label for="user_id">ID:</label><br>
+        <input id="user_id" type="text" name="id" value=""><br>
+
+        <label for="user_pwd">PASSWORD:</label><br>
+        <input id="user_pwd" type="text" name="password" value=""><br><br>
+
+        <label for="user_role">Choose a role:</label>
+        <select name="role" id="user_role">
+            <option value="tutee">Tutee</option>
+            <option value="tutor">Tutor</option>
+        </select>
+        <br>
+        <button type="submit">sign up</button>
+        <button type="button" onclick="location.href='{{url_for('index')}}'">cancel</button>
+    </form>
+
+</body>
+
+</html>

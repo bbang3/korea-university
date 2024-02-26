@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>view lecture</title>
+</head>
+
+<body>
+    <div>
+        {% if role == 'tutor' %}
+        <h1> My lecture </h1>
+        <table border="1">
+            <thead>
+                <th>subject</th>
+                <th>lecture name</th>
+                <th>tutee</th>
+                <th>price</th>
+            </thead>
+            {% for lecture in my_lectures %}
+            <tr>
+                <td> {{lecture[0]}} </td>
+                <td> {{lecture[1]}} </td>
+                <td> {{lecture[2]}} </td>
+                <td> {{lecture[3]}} </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h1> Registered lecture </h1>
+        <table border="1">
+            <thead>
+                <th>subject</th>
+                <th>lecture name</th>
+                <th>tutor</th>
+                <th>price</th>
+            </thead>
+            {% for lecture in registered_lectures %}
+            <tr>
+                <td> {{lecture[0]}} </td>
+                <td> {{lecture[1]}} </td>
+                <td> {{lecture[2]}} </td>
+                <td> {{lecture[3]}} </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        {% else %}
+        <h1> My lecture </h1>
+        <table border="1">
+            <thead>
+                <th>subject</th>
+                <th>lecture name</th>
+                <th>tutor</th>
+                <th>price</th>
+            </thead>
+            {% for lecture in my_lectures %}
+            <tr>
+                <td> {{lecture[0]}} </td>
+                <td> {{lecture[1]}} </td>
+                <td> {{lecture[2]}} </td>
+                <td> {{lecture[3]}} </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </div>
+    <button onclick="location.href='{{url_for('index')}}'">return</button>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+cd /sys/fs/cgroup/cpuset
+mkdir mycpu; cd mycpu
+echo 0 > cpuset.cpus
+echo 0 > cpuset.mems
+echo $$ > tasks
+cat tasks
+
+1 2635 2630
+10 2886 2971
+100 2949 3043
+
+이 dmesg를 파싱해서
+
+프로세스별로 얼마 썼는지 합산해야되는거?
+
+
+[시작] fork - fork -child-fork fork -fork 
+
+sed, awk

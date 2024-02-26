@@ -1,0 +1,5 @@
+Choi 20161000 1 Math
+Park 20110000 3 Computer
+Suck 20159999 4 None
+Joo 20101919 4 Computer
+Kock 20133343 2 Water

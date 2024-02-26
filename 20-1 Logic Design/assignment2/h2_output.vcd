@@ -1,0 +1,225 @@
+$date
+	Thu Jun 04 01:09:07 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module TOP $end
+$var wire 4 ! sum [3:0] $end
+$var wire 1 " overflow $end
+$var wire 1 # carry $end
+$var reg 4 $ a [3:0] $end
+$var reg 4 % b [3:0] $end
+$var reg 32 & i [31:0] $end
+$var reg 1 ' sub_not_add $end
+$scope module CLA $end
+$var wire 4 ( A [3:0] $end
+$var wire 4 ) B [3:0] $end
+$var wire 1 ' M $end
+$var wire 4 * S [3:0] $end
+$var wire 1 " V $end
+$var wire 4 + p [3:0] $end
+$var wire 4 , g [3:0] $end
+$var wire 5 - carrys [4:0] $end
+$var wire 1 # C $end
+$scope begin genblk1[0] $end
+$upscope $end
+$scope begin genblk1[1] $end
+$upscope $end
+$scope begin genblk1[2] $end
+$upscope $end
+$scope begin genblk1[3] $end
+$upscope $end
+$scope module CLAGEN $end
+$var wire 1 ' C0 $end
+$var wire 4 . G [3:0] $end
+$var wire 4 / P [3:0] $end
+$var wire 5 0 C [4:0] $end
+$scope begin genblk1[0] $end
+$upscope $end
+$scope begin genblk1[1] $end
+$upscope $end
+$scope begin genblk1[2] $end
+$upscope $end
+$scope begin genblk1[3] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 0
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+0'
+b0 &
+b0 %
+b0 $
+0#
+0"
+b0 !
+$end
+#5
+1#
+0"
+b11100 -
+b11100 0
+b10 ,
+b10 .
+b1 !
+b1 *
+b1101 +
+b1101 /
+b1 &
+b10 %
+b10 )
+b1111 $
+b1111 (
+#10
+0#
+0"
+b1111 !
+b1111 *
+b0 ,
+b0 .
+b1110 +
+b1110 /
+b10 &
+b1 -
+b1 0
+1'
+b11 %
+b11 )
+b10 $
+b10 (
+#15
+b11 !
+b11 *
+b11 +
+b11 /
+b11 &
+b0 -
+b0 0
+0'
+b10 %
+b10 )
+b1 $
+b1 (
+#20
+b101 !
+b101 *
+b100 +
+b100 /
+b100 &
+b1 -
+b1 0
+1'
+b1111 %
+b1111 )
+b100 $
+b100 (
+#25
+0"
+1#
+b1000 !
+b1000 *
+b110 +
+b110 /
+b1001 ,
+b1001 .
+b101 &
+b11110 -
+b11110 0
+0'
+b1001 %
+b1001 )
+b1111 $
+b1111 (
+#30
+b1100 !
+b1100 *
+b11 +
+b11 /
+b1100 ,
+b1100 .
+b110 &
+b11111 -
+b11111 0
+1'
+b10 %
+b10 )
+b1110 $
+b1110 (
+#35
+1"
+b111 !
+b111 *
+b111 +
+b111 /
+b1000 ,
+b1000 .
+b111 &
+b10000 -
+b10000 0
+0'
+b1100 %
+b1100 )
+b1011 $
+b1011 (
+#40
+0"
+b1000 !
+b1000 *
+b1000 &
+b11111 -
+b11111 0
+1'
+b101 %
+b101 )
+b1101 $
+b1101 (
+#45
+1"
+0#
+b1001 !
+b1001 *
+b101 +
+b101 /
+b10 ,
+b10 .
+b1001 &
+b1100 -
+b1100 0
+0'
+b111 %
+b111 )
+b10 $
+b10 (
+#50
+0"
+1#
+b0 !
+b0 *
+b0 ,
+b0 .
+b1111 +
+b1111 /
+b1010 &
+b11111 -
+b11111 0
+1'
+b11 %
+b11 )
+b11 $
+b11 (
+#200

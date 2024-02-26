@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+</head>
+
+<body>
+    <h1> DB Online learning platform </h1>
+    {% if account[0] == 'admin' %}
+    <div>
+        Admin function <br>
+        <a href=""></a>
+        <button onclick="location.href='{{url_for('get_users')}}'">users info</button>
+        <button onclick="location.href='{{url_for('enrollment')}}'">trades info</button>
+    </div>
+    {% endif %}
+
+    <div>
+        View lecture <br>
+        <button onclick="location.href='{{url_for('my_lecture')}}'"> my info </button> <br>
+    </div>
+    ============================== <br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>popular subject</th>
+                <th>popular lecture</th>
+                <th>popular tutor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{popular_info['subject']}}</td>
+                <td>{{popular_info['lecture']}}</td>
+                <td>{{popular_info['tutor']}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1> User Info </h1>
+    <div>
+        current user: {{account[0]}} /
+        <button onclick="location.href='{{url_for('logout')}}';"> logout </button><br>
+        credit: {{account[1]}} / <button onclick="location.href='{{url_for('credit_gift')}}'">Credit gift</button><br>
+        rating: {{account[2]}} <br>
+        welcome coupon: 
+        {% if account[4] == True %} O
+        {% else %} X
+        {% endif %} <br>
+    </div>
+    <h1> Lectures </h1>
+    <div>
+        {% if account[3] == 'tutor' %}
+        <button onclick="location.href='{{url_for('lecture_form')}}';"> add </button>
+        {% endif %}
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>code</th>
+                    <th>name</th>
+                    <th>price</th>
+                    <th>tutor</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for lecture in lectures %}
+                <form action="{{url_for('register_lecture')}}" method="post">
+                    <tr>
+                        <td>{{ lecture[0] }}</td>
+                        <td>{{ lecture[1] }}</td>
+                        <td>{{ lecture[2] }}</td>
+                        <td>{{ lecture[3] }}</td>
+                        <td><button type="submit">register</button></td>
+                        <input type="hidden" name="code" value="{{lecture[0]}}" />
+                        <input type="hidden" name="name" value="{{lecture[1]}}" />
+                        <input type="hidden" name="price" value="{{lecture[2]}}" />
+                        <input type="hidden" name="tutor" value="{{lecture[3]}}" />
+                    </tr>
+                </form>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

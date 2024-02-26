@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>enroll_success</title>
+</head>
+
+<body>
+    <h1>Your Enrollments</h1>
+    <table border="1">
+        <thead>
+            <th>tutee</th>
+            <th>tutor</th>
+            <th>subject</th>
+            <th>lecture name</th>
+            <th>price</th>
+        </thead>
+        <tbody>
+            {% for enrollment in enrollments %}
+            <tr>
+                <td> {{enrollment[0]}} </td>
+                <td> {{enrollment[1]}} </td>
+                <td> {{enrollment[2]}} </td>
+                <td> {{enrollment[3]}} </td>
+                <td> {{enrollment[4]}} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button type="button" onclick="location.href='{{url_for('index')}}';">return</button>
+</body>
+
+</html>

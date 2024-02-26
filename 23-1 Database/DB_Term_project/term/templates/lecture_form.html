@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>new lecture</title>
+</head>
+
+<body>
+    <div>
+        Subject List <br>
+        <table border="1">
+            {% for subject in subjects %}
+            <tr>
+                <td> {{subject[0]}} </td>
+                <td> {{subject[1]}} </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <br>
+    <form action="{{url_for('add_lecture')}}" method="post">
+        <div>
+            <label for="lecture_code">Code:</label>
+            <input id="lecture_code" type="text" name="code" />
+        </div>
+        <div>
+            <label for="lecture_name">Name:</label>
+            <input id="lecture_name" type="text" name="name" />
+        </div>
+        <div>
+            <label for="lecture_price">Price:</label>
+            <input id="lecture_price" type="number" name="price" />
+        </div>
+        <div>
+            <button type="submit" name="send" value="add">add</button>
+            <button type="button" onclick="location.href='{{url_for('index')}}'">cancel</button>
+        </div>
+    </form>
+    <div>
+
+    </div>
+</body>
+
+</html>

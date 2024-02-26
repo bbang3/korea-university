@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>print_enrollment</title>
+</head>
+
+<body>
+<h1>Enrollments</h1>
+    <table border="1">
+        <thead>
+            <th>tutee</th>
+            <th>tutor</th>
+            <th>code</th>
+            <th>lecture_name</th>
+            <th>lecture_price</th>
+        </thead>
+
+        <tbody>
+            {% for enrollment in enrollments %}
+            <tr>
+                <td>{{ enrollment[0] }}</td>
+                <td>{{ enrollment[1] }}</td>
+                <td>{{ enrollment[2] }}</td>
+                <td>{{ enrollment[3] }}</td>
+                <td>{{ enrollment[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+
+</html>

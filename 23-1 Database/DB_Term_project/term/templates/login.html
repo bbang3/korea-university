@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+</head>
+
+<body>
+    <h1> DB Online learning platform </h1>
+    <form action="{{url_for('login')}}" method="post">
+        <label for="user_id">ID:</label><br>
+        <input id="user_id" type="text" name="id" value=""><br>
+
+        <label for="user_pwd">PASSWORD:</label><br>
+        <input id="user_pwd" type="password" name="password" value=""><br><br>
+
+        <button type="submit" name="send" value="login">login</button>
+        <button type="button" onclick="location.href='{{url_for('signup')}}';">signup</button>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>register lecture</title>
+</head>
+
+<body>
+    <h1>Lecture Info</h1>
+    <table border="1">
+        <thead>
+            <th>code</th>
+            <th>name</th>
+            <th>price</th>
+            <th>tutor</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{lecture["code"]}}</td>
+                <td>{{lecture["name"]}}</td>
+                <td>{{lecture["price"]}}</td>
+                <td>{{lecture["tutor"]}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <div>
+        Your credit: {{account[1]}} <br>
+        Your rating: {{account[2]}} <br
+    </div>
+    <br>
+    <div>
+        Total price: {{lecture["price"]}} <br>
+        Discount price: {{discount}} <br>
+        ==================================== <br>
+        Final price: {{lecture["price"] - discount}} <br>
+    </div>
+    <form action="{{url_for('enrollment')}}" method="post">
+        <input id="tutee" type="hidden" name="tutee" value="{{account[0]}}">
+        <input id="tutor" type="hidden" name="tutor" value="{{lecture['tutor']}}">
+        <input id="code" type="hidden" name="code" value="{{lecture['code']}}">
+        <input id="name" type="hidden" name="name" value="{{lecture['name']}}">
+        <input id="price" type="hidden" name="price" value="{{lecture['price']}}">
+        <input id="discount" type="hidden" name="discount" value="{{discount}}">
+        {% if account[4] == True %}
+            Using welcome coupon? <input type="checkbox" name="welcome_coupon"> <br>
+        {% endif %}
+        <button type="submit">confirm</button>
+        <button type="button" onclick="location.href='{{url_for('index')}}';">cancel</button>
+    </form>
+</body>
+
+</html>

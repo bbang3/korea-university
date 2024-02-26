@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Credit gift</title>
+</head>
+
+<body>
+    <h1>Noblesse Oblige! Credit gift </h1>
+    <form action="{{url_for('credit_gift')}}" method="post">
+        <label for="reciever_id">Receiver id: </label>
+        <input id="reciever_id" type="text" name="reciever_id" value="" />
+        <br>
+        <label for="credit">amount: </label>
+        <input id="credit" type="number" name="credit" value="" />
+        <div>
+            <button type="submit">confirm</button>
+            <button type="button" onclick="location.href='{{url_for('index')}}'">cancel</button>
+        </div>
+    </form>
+</body>

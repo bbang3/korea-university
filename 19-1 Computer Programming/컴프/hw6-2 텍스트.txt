@@ -1,0 +1,3 @@
+This program inputs three lines of text
+and determines the number of occurrences
+of each character in the three lines.

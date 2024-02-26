@@ -1,0 +1,6 @@
+{
+    "reason.codelens.enabled": true,
+    "ocaml.sandbox": {
+        "kind": "global"
+    }
+}
